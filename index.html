@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- This code is for demonstration purposes only.  You should not hotlink to Github, Rawgit, or files from the Cytoscape.js documentation in your production apps. -->
+<html>
+<head>
+<link href="style.css" rel="stylesheet" />
+<meta charset=utf-8 />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<title>16044984 Exam</title>
+<script src="./libs/cytoscape.min.js"></script>
+<script src="./libs/blockly/blockly_compressed.js"></script>
+<script src="./libs/javascript_compressed.js"></script>
+<script src="./libs/python_compressed.js"></script>
+<script src="./libs/blockly/blocks_compressed.js"></script>
+<script src="./libs/blockly/msg/js/en.js"></script>
+<!-- <script src="../blockly/generators/javascript/cos750.js"></script> -->
+<script src="./COS750_defs.js"></script>
+<script src="./COS750_stubs.js"></script>
+<script src="./libs/blockly/appengine/storage.js"></script>
+</head>
+<xml id="toolbox" style="display: none">
+    <category name="Lists" colour="120">
+        <block type="lists_create_empty"></block>
+        <block type="lists_create_with"></block>
+        <block type="lists_length"></block>
+        <block type="lists_isEmpty"></block>
+    </category>
+    <category name="Graph" color="50">
+        <block type="list_enqueue"></block>
+        <block type="list_dequeue"></block>
+        <block type="list_push"></block>
+        <block type="list_pop"></block>
+        <block type="vertex_get_neighbours"></block>
+        <block type="vertex_set_discovered"></block>
+        <block type="vertex_is_discovered"></block>
+        <block type="highlight_edge"></block>
+        <block type="highlight_vertex"></block>
+        <block type="vertex_get"></block>
+    </category>
+    <category name="Loops" colour="120">        
+        <block type="controls_repeat_ext"></block>        
+        <block type="math_number"></block>
+        <block type="controls_whileUntil"></block>
+        <block type="controls_for_each"></block>
+    </category>
+    <category name="Logic" colour="210">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_negate"></block>
+    </category>
+    <category name="Print" colour="230">
+        <block type="text"></block>
+        <block type="text_console_log"></block>
+    </category>    
+    <category name="Variables" color="20" custom="VARIABLE">
+        <button text="Create Empty List" callbackKey="createListVariable"></button>
+    </category>
+
+  </xml>  
+<body>
+<div class="Row">
+    <div id="cy" class="Column"></div>
+    <div id="outputDiv" class="Column">Output goes here</div>
+    <div class="Column">
+        <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+        <button id ="button" type="button" onclick="animateGraph()">Run Code on Graph!</button>
+    </div>
+</div>
+<!-- Load application code at the end to ensure DOM is loaded -->
+<script src="code.js"></script>
+</body>
+</html>

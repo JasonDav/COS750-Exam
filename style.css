@@ -1,0 +1,45 @@
+body { 
+  font: 14px helvetica neue, helvetica, arial, sans-serif;
+}
+
+#cy {
+  height: 480px;
+  width: 600px;
+  float: left;
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+}
+
+#blocklyDiv {
+  height: 480px;
+  width: 600px;
+  float: left;
+}
+
+#outputDiv {
+  height: 480px;
+  width: 300px;
+  float: left;
+  color: #000;
+  white-space: pre-wrap;
+}
+
+#button {
+  float: left;
+  width: 200ox;
+  height: 100px;
+}
+
+/* .Row {
+  display: table;
+  width: 100%; /*Optional*/
+  /* table-layout: fixed; Optional */
+  /* border-spacing: 10px; Optional 
+} */
+
+.Column {
+  /* display: table-cell; */
+  /* background-color: red; Optional */
+  float: left;
+}

@@ -1,0 +1,192 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+	<variables>
+		<variable id="]%{,eyckSLXFf}NY{k!Y">
+			q
+		</variable>
+		<variable id=";^!r0k#Qqa6raYkce?2l">
+			root
+		</variable>
+		<variable id="Be.Msp^)@a9wC+b)8#~9">
+			v
+		</variable>
+		<variable id="qhAsk*s[d}Vv4toC-;6G">
+			w
+		</variable>
+	</variables>
+	<block type="variables_set" id=";~q`EIe}?SZjpsl.kbyQ" x="47" y="3">
+		<field name="VAR" id="]%{,eyckSLXFf}NY{k!Y">
+			q
+		</field>
+		<value name="VALUE">
+			<block type="lists_create_empty" id="!@ob#Z_h0PktJ%A.Ivz+">
+			</block>
+		</value>
+		<next>
+			<block type="variables_set" id="?:[3apI(@,rCpYZ9ZBup">
+				<field name="VAR" id=";^!r0k#Qqa6raYkce?2l">
+					root
+				</field>
+				<value name="VALUE">
+					<block type="vertex_get" id=";2/E^R!Yqip0VIIl6dd4">
+						<field name="ID">
+							a
+						</field>
+					</block>
+				</value>
+				<next>
+					<block type="vertex_set_discovered" id="J?L;03l|XF0d`!$s~(,)">
+						<value name="NODE">
+							<block type="variables_get" id="n2hl;IgJ]ACGbtG5cN*^">
+								<field name="VAR" id=";^!r0k#Qqa6raYkce?2l">
+									root
+								</field>
+							</block>
+						</value>
+						<next>
+							<block type="list_enqueue" id="ZYV.:{N:O-2EXTzOk?mK">
+								<value name="ENQUEUE">
+									<block type="variables_get" id="aYFc4/DzWX6;*H~02_qb">
+										<field name="VAR" id=";^!r0k#Qqa6raYkce?2l">
+											root
+										</field>
+									</block>
+								</value>
+								<value name="LIST">
+									<block type="variables_get" id="-)Ekg58`!3|j{@mNu^1K">
+										<field name="VAR" id="]%{,eyckSLXFf}NY{k!Y">
+											q
+										</field>
+									</block>
+								</value>
+								<next>
+									<block type="controls_whileUntil" id="-1w2ZW?|CzJ}L$BBEVtI">
+										<field name="MODE">
+											WHILE
+										</field>
+										<value name="BOOL">
+											<block type="logic_negate" id="I.]AW;$VkEYr-(ZzO:sX">
+												<value name="BOOL">
+													<block type="lists_isEmpty" id="z`r@~hi2M5,J*WICd)bO">
+														<value name="VALUE">
+															<block type="variables_get" id="RZD_r94tZ2=+NV$~`FHE">
+																<field name="VAR" id="]%{,eyckSLXFf}NY{k!Y">
+																	q
+																</field>
+															</block>
+														</value>
+													</block>
+												</value>
+											</block>
+										</value>
+										<statement name="DO">
+											<block type="variables_set" id="64vE{rAetY;D2o4Kf%K@">
+												<field name="VAR" id="Be.Msp^)@a9wC+b)8#~9">
+													v
+												</field>
+												<value name="VALUE">
+													<block type="list_dequeue" id="a7djif3(nQs!~Cvf)pP`">
+														<value name="LIST">
+															<block type="variables_get" id="s}jMhYc+f^ko/4-y?`A+">
+																<field name="VAR" id="]%{,eyckSLXFf}NY{k!Y">
+																	q
+																</field>
+															</block>
+														</value>
+													</block>
+												</value>
+												<next>
+													<block type="controls_for_each" id="|g_TV`F3@r).|.[Us.b?">
+														<field name="VAR" id="qhAsk*s[d}Vv4toC-;6G">
+															w
+														</field>
+														<value name="LIST">
+															<block type="vertex_get_neighbours" id="=mZgVQB5EsCq:eR7N)$l">
+																<value name="NODE">
+																	<block type="variables_get" id="cLa~,w`v.3q[]kZm3SA0">
+																		<field name="VAR" id="Be.Msp^)@a9wC+b)8#~9">
+																			v
+																		</field>
+																	</block>
+																</value>
+															</block>
+														</value>
+														<statement name="DO">
+															<block type="controls_if" id="9ms;Llm$_6Li!Nx`}Yka">
+																<value name="IF0">
+																	<block type="logic_negate" id="D]!x=7V#LS;0%UcLW:Xc">
+																		<value name="BOOL">
+																			<block type="vertex_is_discovered" id="Rl;hScoV:+^k!qh1hEGR">
+																				<value name="NODE">
+																					<block type="variables_get" id="|^cvM5~G{wb=u-%R(jln">
+																						<field name="VAR" id="qhAsk*s[d}Vv4toC-;6G">
+																							w
+																						</field>
+																					</block>
+																				</value>
+																			</block>
+																		</value>
+																	</block>
+																</value>
+																<statement name="DO0">
+																	<block type="vertex_set_discovered" id="sivUOJKo|K;DW5*%C*Go">
+																		<value name="NODE">
+																			<block type="variables_get" id="l%tq6*cJPjqz$i.KT@xK">
+																				<field name="VAR" id="qhAsk*s[d}Vv4toC-;6G">
+																					w
+																				</field>
+																			</block>
+																		</value>
+																		<next>
+																			<block type="list_enqueue" id="cS10s%y(-fqO[Dmc2wV$">
+																				<value name="ENQUEUE">
+																					<block type="variables_get" id="S@T#_:a2j?F/ef7#:Qm1">
+																						<field name="VAR" id="qhAsk*s[d}Vv4toC-;6G">
+																							w
+																						</field>
+																					</block>
+																				</value>
+																				<value name="LIST">
+																					<block type="variables_get" id="awRxiFOLL[.7lmJ4.1K|">
+																						<field name="VAR" id="]%{,eyckSLXFf}NY{k!Y">
+																							q
+																						</field>
+																					</block>
+																				</value>
+																				<next>
+																					<block type="highlight_edge" id="yGf4;GNcO4On7;L;_GLR">
+																						<value name="FROM">
+																							<block type="variables_get" id="qBWza^dADN{.`gP,j}fQ">
+																								<field name="VAR" id="Be.Msp^)@a9wC+b)8#~9">
+																									v
+																								</field>
+																							</block>
+																						</value>
+																						<value name="NAME">
+																							<block type="variables_get" id="`lletXA@@aUN{T:$7[B?">
+																								<field name="VAR" id="qhAsk*s[d}Vv4toC-;6G">
+																									w
+																								</field>
+																							</block>
+																						</value>
+																					</block>
+																				</next>
+																			</block>
+																		</next>
+																	</block>
+																</statement>
+															</block>
+														</statement>
+													</block>
+												</next>
+											</block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</next>
+					</block>
+				</next>
+			</block>
+		</next>
+	</block>
+</xml>
