@@ -77,14 +77,11 @@ workspace.registerButtonCallback("createListVariable", function(button) {
 
 // Whenever the blocks change update code
 function myUpdateFunction(event) {
-  // var code = Blockly.Python.workspaceToCode(workspace); TODO make python generators
-  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  var code = Blockly.Python.workspaceToCode(workspace); //TODO make python generators
+  // var code = Blockly.JavaScript.workspaceToCode(workspace);
   document.getElementById('outputDiv').innerHTML = code;
 }
 workspace.addChangeListener(myUpdateFunction);
-
-
-
 
 var edgesToHighlight = [];
 function highlightEdge(from, to) {

@@ -57,12 +57,65 @@
 
   </xml>  
 <body>
-<div class="Row">
-    <div id="cy" class="Column"></div>
-    <div id="outputDiv" class="Column">Output goes here</div>
-    <div class="Column">
-        <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
-        <button id ="button" type="button" onclick="animateGraph()">Run Code on Graph!</button>
+<div>
+    <div>
+        <h1>COS 750 Exam Activity</h1>
+        <h2>Graph Traversal Explained and Illustrated through Breadth-First and Depth-First Traversals.</h2>
+        <h3>What is a Graph?</h3>
+        <p>A graph is a data structure that contains nodes of data called 'vertices' that are connected to each other via edges.
+        <br>The vertices represent data values and can be anything from numbers to letters or addresses or complex data like a social media profile.
+        <br>The edges represent connections between these values and can be anything from words to kilometres or something more abstract like a friendship connection.<br>
+        Edges can be either directed or un-directed. This defines how the relaionship between the two vertices work. An example of this is a one-way street between two vertices (destinations).
+        </p>
+
+        <h3>Why are Graphs important?</h3>
+        <p>In computer science graphs are used to represent networks of data, organization of computational devices, as well as visualize and represent complex problems that computers and <br>
+        programmers need to solve. Such as the fastest route to a desintation when you open Google Maps. Or how to recommended products for advetisement or friends to suggesting adding because of<br>
+        their relation to yourself and your friends. Graphs are an indespensible tool for programmers and without them we would be in a very different world.</p>
+
+        <h3>What is Graph Traversal?</h3>
+        <p>Graph Traversal refers to the process of moving along a graph from vertex to vertex via the edges that connect them. Graph Traversal algorithms are algorithms that<br>
+        move along the graph either looking for a value (Searching Algorithm) or computing a value or relationship (normal traversal).</p>
+
+        <h3>Graph programming in Python</h3>
+        <p>Python is a beginner friendly langauge with a dynamic object system, as such constructing and traversing graphs is not a difficult task for an experience Python developr.<br>
+        However, seeing as this course is at a beginner level we will not focus on generating this traversal code ourselves. You can however read more on graph implementations in Python<br>
+        and try it out yourself <a href="https://www.python.org/doc/essays/graphs/">here</a>.</p>
+
+        <h2>Traversal Algorithms</h2>
+        <h3>Breadth First Search</h3>
+        <p>
+            Breadth-First Search is a common graph and <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)">tree</a> traversal algorithm. It works by exploring each neighbour of a vertex before moving onto the<br>
+            neighbours of another vertex. If this doesn't make sense right now, no worries it is illustrated below in the Blockly workspace!<br>
+            The pseudo-code for this algorithm is as so:<br>
+            <img src="images/bfs-code.png"> <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Source: Wikipedia</a>
+        </p>
+
+        <h3>Depth First Search</h3>
+        <p>
+            Depth-First Search is also a common graph and <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)">tree</a> traversal algorithm. It works by exploring each a neighbour of a vertex until it runs out of neighbours to visit. It then<br>
+            backtracks to a vertex with a neighbour it hasn't visited and follows the same pattern as before.
+            The pseudo-code for this algorithm is as so:<br>
+            <img src="images/dfs-code.png"> <a href="https://en.wikipedia.org/wiki/Depth-first_search">Source: Wikipedia</a>
+        </p>
+
+        <h2>The Activity</h2>
+        <p>
+            For this activity an implementation of Breadth-First Search is given in the Blockly Workspace. Click "Run" to see it traverse the graph!<br>
+            Your task is to implement the Depth-First Search using the Blockly Workspace and generate the correct Python code. Once you have done that please screenshot the<br>
+            blocky code and generated Python and send that to your educator for grading.<br>
+            BONUS: Use the generated Python code and a library like <a href="https://pypi.org/project/graphviz/">Graphviz</a> to create your own graph traversal!
+        </p>
+
+        <br>
+    </div>
+    <div class="Row">
+        <div id="cy" class="Column"></div>
+        <div id="outputDiv" class="Column">Output goes here</div>
+        <div class="Column">
+            <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+            <button id ="button" type="button" onclick="animateGraph()">Run Code on Graph!</button>
+        </div>
     </div>
 </div>
 <!-- Load application code at the end to ensure DOM is loaded -->
